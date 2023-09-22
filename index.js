@@ -40,6 +40,7 @@ app.use("/api/course", courseRoute);
 app.use("/api/course-category", CourseCategoryRoute);
 app.use("/api/college", collegeRoute);
 app.use('/api/search', require('./routes/search'));
+app.use("/api/lists", require('./routes/List'));
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

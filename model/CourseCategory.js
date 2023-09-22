@@ -9,23 +9,13 @@ const CourseCategorySchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  subcategories: [
-    {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Course',
-    }
-  ], // Subcategories under this category
+  subcategories: {type:Array}, // Subcategories under this category
   exams: [
     {
         type: String,
     }
   ], // Subcategories under this category
-  college: [
-    {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'College',
-  }
-  ],
+  college: {type:Array},
   description: String
 });
 
